@@ -21,16 +21,15 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 <%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>	
-<%@page import="ispyb.common.util.Constants"%>
+<%@ page import="ispyb.common.util.Constants" %>
 
-<%@page import="ispyb.client.common.menu.*"%>
-
+<%@ page import="ispyb.client.common.menu.*" %>
 
 	<%
 	BarContext bar = new BarContext(request);
 	%>
 
-<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'SOLEIL'}">
+<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'SOLEIL' or SITE_ATTRIBUTE eq 'NEWSITE'}">
 	<TR bgColor=#ffffff>
 		<TD vAlign=center colspan=2>
 			<TABLE  cellpadding="0" cellspacing="0">

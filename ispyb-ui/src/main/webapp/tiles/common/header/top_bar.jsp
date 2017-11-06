@@ -23,9 +23,9 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>	
 
-<%@page import="ispyb.common.util.Constants"%>
+<%@ page import="ispyb.common.util.Constants"%>
 
-<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'EMBL' or SITE_ATTRIBUTE eq 'ALBA'}">
+<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'EMBL' or SITE_ATTRIBUTE eq 'ALBA' or SITE_ATTRIBUTE eq 'NEWSITE'}">
 <!-- first bar:  Logon / Logoff   |   Documentation   -->
 <TR>
 	<TD class=headerblue vAlign=center align=right colspan=2>

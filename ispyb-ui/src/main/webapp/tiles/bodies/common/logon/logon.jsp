@@ -22,7 +22,7 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib uri="http://struts.application-servers.com/layout" prefix="layout" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page import="ispyb.common.util.Constants"%>
+<%@ page import="ispyb.common.util.Constants" %>
 
 <%@ page isELIgnored="false" %>	
 
@@ -63,7 +63,7 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 	          		  <!-- Password -->
 	          		  <layout:column styleClass="MESSAGE_GREY">
 <c:choose>
-<c:when test="${SITE_ATTRIBUTE eq 'ESRF'|| SITE_ATTRIBUTE eq 'MAXIV'|| SITE_ATTRIBUTE eq 'SOLEIL'}">
+<c:when test="${SITE_ATTRIBUTE eq 'ESRF'|| SITE_ATTRIBUTE eq 'MAXIV'|| SITE_ATTRIBUTE eq 'SOLEIL' || SITE_ATTRIBUTE eq 'NEWSITE'}">
 	          		    <bean:message key="label.password"/>&nbsp;(*)
 </c:when>
 <c:otherwise>
@@ -98,6 +98,12 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 	          		    <div align=justify>(*): Your SUN set password.</div>
 	                  </layout:column>
 </c:if>	
+<c:if test="${SITE_ATTRIBUTE eq 'NEWSITE'}">
+	          		  <layout:column styleClass="MESSAGE_GREY">
+	          		    <div align=justify>If you are a ESRF User, your login is the beamline proposal login.<br>
+	          		    (*): Your beamline proposal password is now randomly generated. You can retrieve this password from your A-form, login to the <a href="https://wwws.esrf.fr/misapps/SMISWebClient/"><font color="#6888a8">ESRF User Portal webclient here</font></a>.</div>
+	                  </layout:column>
+</c:if>
                 </layout:grid>
               
             </layout:column>

@@ -444,7 +444,6 @@
   		
   		<properties>
   			<ispyb.site>NEWSITE</ispyb.site>
-  			
   			<ispyb.dbDialect>MYSQL</ispyb.dbDialect>
   			<ispyb.dbJndiName.direct>java:jboss/ispyb_db_direct</ispyb.dbJndiName.direct>
   			<ispyb.authentication.method>SIMPLE</ispyb.authentication.method>
@@ -452,6 +451,7 @@
   			  			
   			<ispyb.root.folder>/data/pyarch/</ispyb.root.folder>
   			<ispyb.uploaded.root.folder>/data/pyarch/pdb/</ispyb.uploaded.root.folder>
+  			<ispyb.upload.folder.pdf>/data/pyarch/pdb/pdf/</ispyb.upload.folder.pdf>
   			
   			<ispyb.server.name.prod>wwws.esrf.fr</ispyb.server.name.prod>
   			<ispyb.server.name.prod.alias>ispyb.esrf.fr</ispyb.server.name.prod.alias>
@@ -473,17 +473,21 @@
   			
   			<mail.report.industry.from>mxind@esrf.fr</mail.report.industry.from>
 			<mail.report.industry.cc>ix@esrf.fr</mail.report.industry.cc>					
+			<mail.report.industry.cc.fx12>wang.weiru@gene.com </mail.report.industry.cc.fx12>
 			
 			<dictionary.site>The ESRF</dictionary.site> 
 			<dictionary.bcm>mxCuBE</dictionary.bcm>
 			
-			<ispyb.authorisation.active>false</ispyb.authorisation.active>
+			<ispyb.authorisation.active>true</ispyb.authorisation.active>
 			
-			<ispyb.userportal.link>JSON</ispyb.userportal.link>
-			<ispyb.upload.folder.json>/data/pyarch/pdb/json/</ispyb.upload.folder.json>
-			  				
+			<userportal.webservices.url>http://ovm-smis.esrf.fr:8080/SMISServer-ejb3/SMISWebService/SMISWebServiceBean?wsdl</userportal.webservices.url> 
+  			
+
+  			 <ispyb.userportal.link>SMIS</ispyb.userportal.link>  
+  			 <ispyb.upload.folder.json>/data/pyarch/pdb/json/</ispyb.upload.folder.json>
+  			
   		</properties>
-  	</profile> 
+  	</profile>
   	
   </profiles>
 	

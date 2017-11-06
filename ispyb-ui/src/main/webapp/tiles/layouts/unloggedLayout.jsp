@@ -23,7 +23,7 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
 <HEAD>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@page import="ispyb.common.util.Constants"%>
+<%@ page import="ispyb.common.util.Constants" %>
 
 <TITLE><tiles:getAsString name="title"/></TITLE>
 <META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
@@ -70,7 +70,7 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
   </TBODY>
 </TABLE>
 
-<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'ALBA'}">
+<c:if test="${SITE_ATTRIBUTE eq 'ESRF' or SITE_ATTRIBUTE eq 'ALBA' or SITE_ATTRIBUTE eq 'NEWSITE'}">
 	<!-- ****************** begin Body of the page: menu left + content + footer *********************** -->
 	<TABLE cellSpacing="0" cellPadding="0" width="100%" border="0">
 	  <TBODY>

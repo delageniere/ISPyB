@@ -72,4 +72,9 @@ Contributors : S. Delageniere, R. Leal, L. Launer, K. Levik, S. Veyrier, P. Bren
       		Copyright © 2014 ISPyB All rights reserved. <br/>
       </P>
     </c:if>
+        <c:if test="${SITE_ATTRIBUTE eq 'NEWSITE'}">
+      <P class=small>
+      		Copyright © 2017 ISPyB All rights reserved. <br/>
+      </P>
+    </c:if>
 </DIV>
