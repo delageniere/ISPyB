@@ -537,21 +537,22 @@ public class UpdateFromSMIS {
 				// create or update the person and his/her laboratory
 				getProposal(labContact, lab, person, proposalNumber, proposalCode);
 
-				// retrieve person to get it 'personId' for persistence of the labContact
-				String familyName = labContacts[i].getScientistName();
-				String givenName = labContacts[i].getScientistFirstName();
+				// retrieve person to get it 'personId' for persistence of the labContact				
 				String siteId = null;
 				Person3VO currentPerson = null;
+				
 				// try first to use siteID: better for unicity, but only for people having a siteId, later use personUUID
 				if (labContacts[i].getSiteId() != null) {
 					siteId = labContacts[i].getSiteId().toString();
 					currentPerson = person.findBySiteId(siteId);
-				} else {
+				} else if (labContacts[i].getBllogin() != null ){
 					currentPerson = person.findByLogin(labContacts[i].getBllogin());
-					/*List<Person3VO> persons = person.findByFamilyAndGivenName(familyName, givenName);
+				}
+				else {
+					List<Person3VO> persons = person.findByFamilyAndGivenName(labContacts[i].getScientistName(), labContacts[i].getScientistFirstName());
 					if (persons != null && !persons.isEmpty()) {
 						currentPerson = persons.get(0);
-					}*/
+					}
 				}
 									
 				if (currentPerson != null) {
